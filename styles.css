@@ -13,15 +13,22 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin: 0 0 10px 0;
-}
 a { color: blue; text-decoration: underline; }
 nav { margin: 10px 0 20px 0; }
-nav a { margin-right: 12px; }
+nav a {
+  margin-right: 12px;
+  padding: 2px 6px;
+}
+body.home nav a[href="index.html"],
+body.about nav a[href="about.html"],
+body.music nav a[href="music.html"],
+body.shows nav a[href="shows.html"],
+body.shop nav a[href="shop.html"],
+body.contact nav a[href="contact.html"] {
+  background: yellow;
+  color: black;
+  text-decoration: none;
+}
 .bg-photo {
   position: fixed;
   top: 50%;
@@ -30,6 +37,16 @@ nav a { margin-right: 12px; }
   width: 300px;
   height: 300px;
   background: url('assets/photo.png') center/cover no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100vh;
+  background: url('assets/side.png') center right / contain no-repeat;
   z-index: 0;
   pointer-events: none;
 }
@@ -56,7 +73,6 @@ p, li, label {
   padding: 6px 10px;
   margin: 6px 0 12px 0;
 }
-header { margin-bottom: 10px; }
 footer { margin-top: 40px; }
 form {
   display: flex;

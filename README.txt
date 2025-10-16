@@ -1,1 +1,1 @@
-Saburnia v18 — Bottom image removed. Helvetica 12pt, logo 18px, and all other pages unchanged.
+Saburnia v19 — Headings removed, yellow highlight on current page, right-side image, text above images with translucent white backdrop.
