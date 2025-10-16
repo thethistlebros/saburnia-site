@@ -1,1 +1,1 @@
-Saburnia v31 — fixed side image visibility (explicit background settings, z-index: -1).
+Saburnia v32 — side image visible by stacking fix (z-index: 0).
