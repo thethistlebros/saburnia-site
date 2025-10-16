@@ -41,7 +41,7 @@ nav a { margin-right: 12px; }
   background: url('assets/bottom.png') no-repeat center bottom;
   background-size: contain;
   width: 100%;
-  height: auto;
+  height: 25vh;
   z-index: 0;
   pointer-events: none;
 }
