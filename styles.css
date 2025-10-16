@@ -14,14 +14,16 @@ body {
   overflow-x: hidden;
 }
 a { color: blue; text-decoration: underline; }
+nav, p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  width: fit-content;
+  background: rgba(255,255,255,0.85);
+  padding: 6px 10px;
+  margin: 6px 0 12px 0;
+}
 nav {
   position: relative;
   z-index: 2;
-  margin: 10px 0 20px 0;
-  background: rgba(255,255,255,0.85);
-  display: inline-flex;
-  width: fit-content;
-  padding: 6px 10px;
 }
 nav span.current {
   color: black;
@@ -67,30 +69,22 @@ nav a {
   pointer-events: auto;
   background: url('assets/overlay.png') center/cover no-repeat;
 }
-main, section, footer, header {
+main, section, header {
   position: relative;
   z-index: 2;
   background: transparent;
   max-width: 780px;
 }
-p, li, label, footer {
-  display: block;
-  background: rgba(255,255,255,0.85);
-  padding: 6px 10px;
-  margin: 6px 0 12px 0;
-}
 footer {
-  display: inline-flex;
-  background: rgba(255,255,255,0.85);
-  padding: 6px 10px;
-  margin: 6px 0 12px 0;
-  width: fit-content;
+  position: relative;
+  z-index: 2;
 }
 form {
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 8px;
+  background: rgba(255,255,255,0.85);
 }
 @media (max-width: 420px) {
   form { flex-wrap: wrap; }

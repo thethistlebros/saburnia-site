@@ -1,1 +1,1 @@
-Saburnia v35 — nav and footer backgrounds now fit content width.
+Saburnia v36 — all text boxes are inline translucent boxes hugging their content width.
