@@ -1,1 +1,1 @@
-Saburnia v30 — added fixed side image on right edge (side.png), full height preserving aspect ratio.
+Saburnia v31 — fixed side image visibility (explicit background settings, z-index: -1).

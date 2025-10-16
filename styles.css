@@ -42,6 +42,19 @@ nav a {
   z-index: 0;
   pointer-events: none;
 }
+.bg-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  background-image: url('assets/side.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+  z-index: -1;
+  pointer-events: none;
+}
 .bg-overlay {
   position: fixed;
   top: 50%;
@@ -52,16 +65,6 @@ nav a {
   z-index: 3;
   pointer-events: auto;
   background: url('assets/overlay.png') center/cover no-repeat;
-}
-.bg-side {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
-  background: url('assets/side.png') right center/auto 100% no-repeat;
-  z-index: 0;
-  pointer-events: none;
 }
 main, section, footer, header {
   position: relative;
