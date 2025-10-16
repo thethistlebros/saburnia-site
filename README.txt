@@ -1,1 +1,1 @@
-Saburnia v27 — Clean version without side image, simplified and stable.
+Saburnia v28 — Navigation bar now has translucent white background like other text blocks.
