@@ -1,1 +1,1 @@
-Saburnia v17 site — Helvetica 12pt, logo 18px tall, bottom image fixed at 25vh.
+Saburnia v18 — Bottom image removed. Helvetica 12pt, logo 18px, and all other pages unchanged.
