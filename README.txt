@@ -1,1 +1,1 @@
-Saburnia v25 — Side image rotated 90° clockwise, fills vertical height, properly aligned and scaled.
+Saburnia v26 — Simplified <img>-based right-side image, rotated 90°, full height, always visible.

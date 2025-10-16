@@ -29,6 +29,16 @@ nav span.current {
 nav a {
   margin-right: 12px;
 }
+.side-img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  transform: rotate(90deg);
+  transform-origin: top right;
+  z-index: 1;
+  pointer-events: none;
+}
 .bg-photo {
   position: fixed;
   top: 50%;
@@ -39,18 +49,6 @@ nav a {
   background: url('assets/photo.png') center/cover no-repeat;
   z-index: 0;
   pointer-events: none;
-}
-.bg-side {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vh; /* becomes height after rotation */
-  height: auto;
-  background: url('assets/side.png') center/contain no-repeat;
-  z-index: 1;
-  pointer-events: none;
-  transform: rotate(90deg) translateY(-100%);
-  transform-origin: top right;
 }
 .bg-overlay {
   position: fixed;
