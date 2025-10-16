@@ -1,1 +1,1 @@
-Saburnia v22 — Right image fixed, white translucent background on all text, mailing list layered above, no highlight, current page non-clickable.
+Saburnia v23 — Side image visible, correct nav colors, only current page black, text with white translucent backdrop.
