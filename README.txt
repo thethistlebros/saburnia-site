@@ -1,1 +1,1 @@
-Saburnia v19 — Headings removed, yellow highlight on current page, right-side image, text above images with translucent white backdrop.
+Saburnia v20 — Fixed right-side image flush to edge, full height, other elements unchanged.

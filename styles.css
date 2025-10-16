@@ -44,9 +44,9 @@ body.contact nav a[href="contact.html"] {
   position: fixed;
   top: 0;
   right: 0;
-  width: auto;
   height: 100vh;
-  background: url('assets/side.png') center right / contain no-repeat;
+  width: auto;
+  background: url('assets/side.png') top right / auto 100% no-repeat;
   z-index: 0;
   pointer-events: none;
 }
