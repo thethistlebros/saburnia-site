@@ -52,7 +52,7 @@ nav a {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: auto 100%;
-  z-index: 0;           /* <-- FIXED: above body, below text */
+  z-index: 1;           /* Raised from 0 to 1 */
   pointer-events: none;
 }
 .bg-overlay {

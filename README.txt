@@ -1,1 +1,1 @@
-Saburnia v32 — side image visible by stacking fix (z-index: 0).
+Saburnia v33 — side image z-index set to 1 to ensure visibility above body and photo.
