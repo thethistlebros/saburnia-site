@@ -1,1 +1,1 @@
-Saburnia v36 — all text boxes are inline translucent boxes hugging their content width.
+Saburnia v37 — nav reverted to inline-flex to prevent excess width from inline-block spacing.

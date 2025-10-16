@@ -14,14 +14,12 @@ body {
   overflow-x: hidden;
 }
 a { color: blue; text-decoration: underline; }
-nav, p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
-  display: inline-block;
+nav {
+  display: inline-flex;
   width: fit-content;
   background: rgba(255,255,255,0.85);
   padding: 6px 10px;
   margin: 6px 0 12px 0;
-}
-nav {
   position: relative;
   z-index: 2;
 }
@@ -33,6 +31,13 @@ nav span.current {
 }
 nav a {
   margin-right: 12px;
+}
+p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  width: fit-content;
+  background: rgba(255,255,255,0.85);
+  padding: 6px 10px;
+  margin: 6px 0 12px 0;
 }
 .bg-photo {
   position: fixed;
