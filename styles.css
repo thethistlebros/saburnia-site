@@ -53,7 +53,7 @@ nav a {
   pointer-events: auto;
   background: url('assets/overlay.png') center/cover no-repeat;
 }
-main, section, footer, header, nav {
+main, section, footer, header {
   position: relative;
   z-index: 2;
   background: transparent;

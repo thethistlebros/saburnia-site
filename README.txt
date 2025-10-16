@@ -1,1 +1,1 @@
-Saburnia v28 — Navigation bar now has translucent white background like other text blocks.
+Saburnia v29 — Navigation bar fixed: translucent white background restored (nav removed from transparent group rule).
