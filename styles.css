@@ -29,16 +29,6 @@ nav span.current {
 nav a {
   margin-right: 12px;
 }
-.side-img {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  transform: rotate(90deg);
-  transform-origin: top right;
-  z-index: 1;
-  pointer-events: none;
-}
 .bg-photo {
   position: fixed;
   top: 50%;

@@ -1,1 +1,1 @@
-Saburnia v26 — Simplified <img>-based right-side image, rotated 90°, full height, always visible.
+Saburnia v27 — Clean version without side image, simplified and stable.
