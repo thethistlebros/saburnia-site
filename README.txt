@@ -1,1 +1,1 @@
-Saburnia v29 — Navigation bar fixed: translucent white background restored (nav removed from transparent group rule).
+Saburnia v30 — added fixed side image on right edge (side.png), full height preserving aspect ratio.

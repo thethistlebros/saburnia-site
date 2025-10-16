@@ -53,6 +53,16 @@ nav a {
   pointer-events: auto;
   background: url('assets/overlay.png') center/cover no-repeat;
 }
+.bg-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  background: url('assets/side.png') right center/auto 100% no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
 main, section, footer, header {
   position: relative;
   z-index: 2;
