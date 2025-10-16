@@ -5,31 +5,23 @@ html, body {
 body {
   background: #fff;
   color: #000;
-  font-family: monospace;
-  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
   margin: 0;
   padding: 20px;
   line-height: 1.4;
   position: relative;
   overflow-x: hidden;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
   text-transform: uppercase;
   font-weight: normal;
   margin: 0 0 10px 0;
 }
-
-p, ul, li, label, input, button, a, nav {
-  font-size: 1em;
-}
 a { color: blue; text-decoration: underline; }
-
 nav { margin: 10px 0 20px 0; }
 nav a { margin-right: 12px; }
-
-/* Fixed centered background photo */
 .bg-photo {
   position: fixed;
   top: 50%;
@@ -41,8 +33,18 @@ nav a { margin-right: 12px; }
   z-index: 0;
   pointer-events: none;
 }
-
-/* Transparent clickable overlay */
+.bg-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('assets/bottom.png') no-repeat center bottom;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
 .bg-overlay {
   position: fixed;
   top: 50%;
@@ -54,32 +56,29 @@ nav a { margin-right: 12px; }
   pointer-events: auto;
   background: url('assets/overlay.png') center/cover no-repeat;
 }
-
-/* Text layout */
 main, section, footer, header, nav {
   position: relative;
   z-index: 2;
   background: transparent;
   max-width: 780px;
 }
-
-/* Continuous haze behind full text blocks */
 p, li, label {
   display: block;
   background: rgba(255,255,255,0.85);
   padding: 6px 10px;
   margin: 6px 0 12px 0;
 }
-
 header { margin-bottom: 10px; }
 footer { margin-top: 40px; }
-
-/* Mailing list form (side-by-side) */
 form {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 8px;
+}
+@media (max-width: 420px) {
+  form { flex-wrap: wrap; }
+  input[type="email"], button.linky { flex: 1 1 100%; }
 }
 input[type="email"] {
   flex: 1 1 auto;
@@ -103,7 +102,6 @@ button.linky.enabled {
   text-decoration: underline;
   cursor: pointer;
 }
-
 .wrapper {
   min-height: 100%;
   display: flex;
