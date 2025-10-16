@@ -1,1 +1,1 @@
-Saburnia v34 — guaranteed side image fix with aspect ratio and contain background.
+Saburnia v35 — nav and footer backgrounds now fit content width.
