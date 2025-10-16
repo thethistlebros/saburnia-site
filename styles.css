@@ -44,12 +44,13 @@ nav a {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
-  width: 300px;
-  background: url('assets/side.png') center right / cover no-repeat;
+  width: 100vh; /* becomes height after rotation */
+  height: auto;
+  background: url('assets/side.png') center/contain no-repeat;
   z-index: 1;
   pointer-events: none;
-  outline: 1px solid red; /* debug visibility */
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top right;
 }
 .bg-overlay {
   position: fixed;

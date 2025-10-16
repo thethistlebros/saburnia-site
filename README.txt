@@ -1,1 +1,1 @@
-Saburnia v24 — Side image debug version with red outline and 300px width fixed to right edge.
+Saburnia v25 — Side image rotated 90° clockwise, fills vertical height, properly aligned and scaled.
