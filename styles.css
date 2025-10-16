@@ -45,10 +45,11 @@ nav a {
   top: 0;
   right: 0;
   height: 100vh;
-  width: auto;
-  background: url('assets/side.png') top right / auto 100% no-repeat;
+  width: 300px;
+  background: url('assets/side.png') center right / cover no-repeat;
   z-index: 1;
   pointer-events: none;
+  outline: 1px solid red; /* debug visibility */
 }
 .bg-overlay {
   position: fixed;

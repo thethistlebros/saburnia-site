@@ -1,1 +1,1 @@
-Saburnia v23 — Side image visible, correct nav colors, only current page black, text with white translucent backdrop.
+Saburnia v24 — Side image debug version with red outline and 300px width fixed to right edge.
