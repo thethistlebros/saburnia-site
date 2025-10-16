@@ -1,1 +1,1 @@
-Saburnia v33 — side image z-index set to 1 to ensure visibility above body and photo.
+Saburnia v34 — guaranteed side image fix with aspect ratio and contain background.

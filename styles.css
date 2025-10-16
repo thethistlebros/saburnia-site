@@ -47,12 +47,12 @@ nav a {
   top: 0;
   right: 0;
   height: 100%;
-  width: auto;
+  aspect-ratio: 1 / 1;
   background-image: url('assets/side.png');
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: auto 100%;
-  z-index: 1;           /* Raised from 0 to 1 */
+  background-size: contain;
+  z-index: 0;
   pointer-events: none;
 }
 .bg-overlay {
