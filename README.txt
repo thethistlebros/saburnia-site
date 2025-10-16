@@ -1,1 +1,1 @@
-Saburnia v20 — Fixed right-side image flush to edge, full height, other elements unchanged.
+Saburnia v21 — Fixed right-side image path and ensured full visibility.
