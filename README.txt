@@ -1,1 +1,1 @@
-Saburnia v21 — Fixed right-side image path and ensured full visibility.
+Saburnia v22 — Right image fixed, white translucent background on all text, mailing list layered above, no highlight, current page non-clickable.

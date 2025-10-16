@@ -14,18 +14,20 @@ body {
   overflow-x: hidden;
 }
 a { color: blue; text-decoration: underline; }
-nav { margin: 10px 0 20px 0; }
+nav {
+  margin: 10px 0 20px 0;
+  background: rgba(255,255,255,0.85);
+  display: inline-block;
+  padding: 6px 10px;
+}
+nav span.current {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+  padding-right: 12px;
+}
 nav a {
   margin-right: 12px;
-  padding: 2px 6px;
-}
-body.home nav a[href="index.html"],
-body.about nav a[href="about.html"],
-body.music nav a[href="music.html"],
-body.shows nav a[href="shows.html"],
-body.shop nav a[href="shop.html"],
-body.contact nav a[href="contact.html"] {
-  background: yellow;
   color: black;
   text-decoration: none;
 }
@@ -36,7 +38,7 @@ body.contact nav a[href="contact.html"] {
   transform: translate(-50%, -50%);
   width: 300px;
   height: 300px;
-  background: url('../assets/photo.png') center/cover no-repeat;
+  background: url('assets/photo.png') center/cover no-repeat;
   z-index: 0;
   pointer-events: none;
 }
@@ -46,11 +48,7 @@ body.contact nav a[href="contact.html"] {
   right: 0;
   height: 100vh;
   width: auto;
-  background-color: transparent;
-  background-image: url('../assets/side.png');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: auto 100%;
+  background: url('assets/side.png') top right / auto 100% no-repeat;
   z-index: 0;
   pointer-events: none;
 }
@@ -63,7 +61,7 @@ body.contact nav a[href="contact.html"] {
   height: 300px;
   z-index: 3;
   pointer-events: auto;
-  background: url('../assets/overlay.png') center/cover no-repeat;
+  background: url('assets/overlay.png') center/cover no-repeat;
 }
 main, section, footer, header, nav {
   position: relative;
@@ -71,7 +69,7 @@ main, section, footer, header, nav {
   background: transparent;
   max-width: 780px;
 }
-p, li, label {
+p, li, label, footer {
   display: block;
   background: rgba(255,255,255,0.85);
   padding: 6px 10px;
@@ -114,5 +112,7 @@ button.linky.enabled {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 main { flex: 1; }
