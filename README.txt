@@ -1,1 +1,1 @@
-Saburnia v38 — center image and overlay enlarged to 1000x1000.
+Saburnia v37 — nav reverted to inline-flex to prevent excess width from inline-block spacing.
