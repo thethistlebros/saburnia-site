@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Private Listen — Saburnia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://onetimelinks.onrender.com">
+  <style>
+    :root { --maxw: 820px; }
+    html, body { margin: 0; padding: 0; background: #fff; color: #111; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .wrap { max-width: var(--maxw); margin: 40px auto; padding: 0 20px; }
+    h1 { font-weight: 600; font-size: 28px; margin: 0 0 8px; letter-spacing: 0.2px; }
+    p { margin: 10px 0 0; line-height: 1.55; font-size: 15px; }
+    .card { border: 1px solid #eaeaea; border-radius: 12px; padding: 20px; margin-top: 20px; }
+    .muted { color: #666; }
+    .error { color: #b00020; }
+    .player { margin-top: 16px; }
+    .spinner {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid #e0e0e0; border-top-color: #111; animation: spin 0.7s linear infinite;
+      display: inline-block; vertical-align: middle; margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .footer { margin-top: 40px; font-size: 13px; color: #999; }
+    a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Private Listen</h1>
+    <p class="muted">This page validates your one-time link and plays the track securely.</p>
+
+    <div id="status" class="card">
+      <span class="spinner"></span>
+      <span>Checking your link…</span>
+    </div>
+
+    <div id="expired" class="card error hidden">
+      <strong>This link has expired.</strong>
+      <p class="muted">If you think this is a mistake, ask the sender for a new link.</p>
+    </div>
+
+    <div id="player" class="card hidden">
+      <div id="trackMeta" class="muted"></div>
+      <div class="player">
+        <audio id="audio" controls preload="auto"></audio>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="muted">© Saburnia</span>
+    </div>
+  </div>
+
+  <script src="/listen/verify.js" defer></script>
+</body>
+</html>
