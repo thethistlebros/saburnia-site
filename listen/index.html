@@ -6,23 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
   <style>
-    :root { --maxw: 980px; }
-    html, body { margin: 0; padding: 0; background: #fff; color: #111; height: 100%; }
+    :root { --maxw: 960px; }
+    html, body { margin: 0; padding: 0; background: #fff; color: #111; min-height: 100%; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 16px; }
-    h1 { font-weight: 600; font-size: 24px; margin: 0 0 12px; letter-spacing: 0.2px; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 32px 18px; }
+    h1 { font-weight: 600; font-size: 24px; margin: 0 0 12px; letter-spacing: .2px; }
     p { margin: 8px 0 16px; line-height: 1.55; font-size: 15px; color: #666; }
     .frameWrap { width: 100%; min-height: 420px; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; }
     iframe { width: 100%; height: 560px; border: 0; display: block; background: #fff; }
     @media (min-height: 900px) { iframe { height: 720px; } }
     .error { color: #b00020; padding: 12px; border: 1px solid #f2c6cc; background: #fff4f5; border-radius: 10px; }
+    .muted { color: #777; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Private Listen</h1>
-    <p>This page opens your one-time link securely, without leaving saburnia.com.</p>
-    <div id="error" class="error" style="display:none;">Missing or invalid link.</div>
+    <p class="muted">Opens your one-time link securely without leaving saburnia.com.</p>
+    <div id="error" class="error" style="display:none;"></div>
     <div class="frameWrap" id="frameWrap" style="display:none;">
       <iframe id="playerFrame" allow="autoplay"></iframe>
     </div>
@@ -30,21 +31,21 @@
 
   <script>
     (function () {
-      function getToken() {
-        const parts = window.location.pathname.split("/").filter(Boolean);
-        // Expecting ["listen", "<token>"]
-        return parts[1] || "";
+      function tokenFromPath() {
+        // Works for /listen and /listen/<token>
+        const parts = location.pathname.split("/").filter(Boolean);
+        // ["listen"] or ["listen", "<token>"]
+        return parts.length >= 2 ? parts[1] : "";
       }
-      const token = getToken();
+      const token = tokenFromPath();
       const frame = document.getElementById("playerFrame");
       const wrap  = document.getElementById("frameWrap");
       const err   = document.getElementById("error");
       if (!token) {
         err.style.display = "block";
-        err.textContent = "Missing link id.";
+        err.textContent = "No link id found. Please use a full link like /listen/abc123";
         return;
       }
-      // Point iframe to your Render backend player for this token:
       frame.src = "https://onetimelinks.onrender.com/listen/" + encodeURIComponent(token);
       wrap.style.display = "block";
     })();

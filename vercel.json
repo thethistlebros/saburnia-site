@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
+    { "source": "/listen", "destination": "/listen/index.html" },
+    { "source": "/listen/", "destination": "/listen/index.html" },
     { "source": "/listen/(.*)", "destination": "/listen/index.html" }
   ]
 }
