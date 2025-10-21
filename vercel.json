@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/listen/(.*)", "destination": "/listen/index.html" }
+  ]
+}
