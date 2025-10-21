@@ -5,56 +5,49 @@
   <title>Private Listen — Saburnia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="preconnect" href="https://onetimelinks.onrender.com">
   <style>
-    :root { --maxw: 820px; }
-    html, body { margin: 0; padding: 0; background: #fff; color: #111; }
+    :root { --maxw: 980px; }
+    html, body { margin: 0; padding: 0; background: #fff; color: #111; height: 100%; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .wrap { max-width: var(--maxw); margin: 40px auto; padding: 0 20px; }
-    h1 { font-weight: 600; font-size: 28px; margin: 0 0 8px; letter-spacing: 0.2px; }
-    p { margin: 10px 0 0; line-height: 1.55; font-size: 15px; }
-    .card { border: 1px solid #eaeaea; border-radius: 12px; padding: 20px; margin-top: 20px; }
-    .muted { color: #666; }
-    .error { color: #b00020; }
-    .player { margin-top: 16px; }
-    .spinner {
-      width: 20px; height: 20px; border-radius: 50%;
-      border: 2px solid #e0e0e0; border-top-color: #111; animation: spin 0.7s linear infinite;
-      display: inline-block; vertical-align: middle; margin-right: 8px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .footer { margin-top: 40px; font-size: 13px; color: #999; }
-    a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-    .hidden { display: none; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 16px; }
+    h1 { font-weight: 600; font-size: 24px; margin: 0 0 12px; letter-spacing: 0.2px; }
+    p { margin: 8px 0 16px; line-height: 1.55; font-size: 15px; color: #666; }
+    .frameWrap { width: 100%; min-height: 420px; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; }
+    iframe { width: 100%; height: 560px; border: 0; display: block; background: #fff; }
+    @media (min-height: 900px) { iframe { height: 720px; } }
+    .error { color: #b00020; padding: 12px; border: 1px solid #f2c6cc; background: #fff4f5; border-radius: 10px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Private Listen</h1>
-    <p class="muted">This page validates your one-time link and plays the track securely.</p>
-
-    <div id="status" class="card">
-      <span class="spinner"></span>
-      <span>Checking your link…</span>
-    </div>
-
-    <div id="expired" class="card error hidden">
-      <strong>This link has expired.</strong>
-      <p class="muted">If you think this is a mistake, ask the sender for a new link.</p>
-    </div>
-
-    <div id="player" class="card hidden">
-      <div id="trackMeta" class="muted"></div>
-      <div class="player">
-        <audio id="audio" controls preload="auto"></audio>
-      </div>
-    </div>
-
-    <div class="footer">
-      <span class="muted">© Saburnia</span>
+    <p>This page opens your one-time link securely, without leaving saburnia.com.</p>
+    <div id="error" class="error" style="display:none;">Missing or invalid link.</div>
+    <div class="frameWrap" id="frameWrap" style="display:none;">
+      <iframe id="playerFrame" allow="autoplay"></iframe>
     </div>
   </div>
 
-  <script src="/listen/verify.js" defer></script>
+  <script>
+    (function () {
+      function getToken() {
+        const parts = window.location.pathname.split("/").filter(Boolean);
+        // Expecting ["listen", "<token>"]
+        return parts[1] || "";
+      }
+      const token = getToken();
+      const frame = document.getElementById("playerFrame");
+      const wrap  = document.getElementById("frameWrap");
+      const err   = document.getElementById("error");
+      if (!token) {
+        err.style.display = "block";
+        err.textContent = "Missing link id.";
+        return;
+      }
+      // Point iframe to your Render backend player for this token:
+      frame.src = "https://onetimelinks.onrender.com/listen/" + encodeURIComponent(token);
+      wrap.style.display = "block";
+    })();
+  </script>
 </body>
 </html>
