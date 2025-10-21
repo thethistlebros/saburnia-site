@@ -22,7 +22,7 @@
 <body>
   <div class="wrap">
     <h1>Private Listen</h1>
-    <p class="muted">Opens your one-time link securely without leaving saburnia.com.</p>
+    <p class="muted">This page securely opens your one‑time link without leaving saburnia.com.</p>
     <div id="error" class="error" style="display:none;"></div>
     <div class="frameWrap" id="frameWrap" style="display:none;">
       <iframe id="playerFrame" allow="autoplay"></iframe>
@@ -32,9 +32,7 @@
   <script>
     (function () {
       function tokenFromPath() {
-        // Works for /listen and /listen/<token>
         const parts = location.pathname.split("/").filter(Boolean);
-        // ["listen"] or ["listen", "<token>"]
         return parts.length >= 2 ? parts[1] : "";
       }
       const token = tokenFromPath();
