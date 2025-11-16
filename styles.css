@@ -1,7 +1,5 @@
 
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 body {
   background: transparent;
   color: #000;
@@ -23,15 +21,8 @@ nav {
   position: relative;
   z-index: 2;
 }
-nav span.current {
-  color: black;
-  text-decoration: none;
-  cursor: default;
-  padding-right: 12px;
-}
-nav a {
-  margin-right: 12px;
-}
+nav span.current { color: black; text-decoration: none; cursor: default; padding-right: 12px; }
+nav a { margin-right: 12px; }
 p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: fit-content;
@@ -44,8 +35,8 @@ p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  width: 1000px;
+  height: 1000px;
   background: url('assets/photo.png') center/cover no-repeat;
   z-index: 0;
   pointer-events: none;
@@ -68,8 +59,8 @@ p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  width: 1000px;
+  height: 1000px;
   z-index: 3;
   pointer-events: auto;
   background: url('assets/overlay.png') center/cover no-repeat;
@@ -80,10 +71,7 @@ main, section, header {
   background: transparent;
   max-width: 780px;
 }
-footer {
-  position: relative;
-  z-index: 2;
-}
+footer { position: relative; z-index: 2; }
 form {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -112,11 +100,7 @@ button.linky {
   padding: 0;
   white-space: nowrap;
 }
-button.linky.enabled {
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-}
+button.linky.enabled { color: blue; text-decoration: underline; cursor: pointer; }
 .wrapper {
   min-height: 100%;
   display: flex;
