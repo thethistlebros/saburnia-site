@@ -30,12 +30,7 @@ p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
   padding: 6px 10px;
   margin: 6px 0 12px 0;
 }
-.bg-photo {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
+.X0px;
   height: 1000px;
   background: url('assets/photo.png') center/cover no-repeat;
   z-index: 0;
@@ -54,12 +49,7 @@ p, li, label, footer, form, h1, h2, h3, h4, h5, h6 {
   z-index: 0;
   pointer-events: none;
 }
-.bg-overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
+.X0px;
   height: 1000px;
   z-index: 3;
   pointer-events: auto;
